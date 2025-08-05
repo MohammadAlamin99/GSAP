@@ -53,13 +53,19 @@
     height: 100vh;
     background-color: purple;
 }
-.page7 .custom_cursor{
-    width: 40px;
-    height: 40px;
+.custom_cursor{
+    width: 20px;
+    height: 20px;
     position: absolute;
     background-color: white;
     border-radius: 50%;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5px;
+    color: #000;
+    text-align: center;
 }
 .page7 .img_box{
     width: 100%;
@@ -69,22 +75,20 @@
     align-items: center;
 }
 .page7 .img_box .img{
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
     position: relative;
-    z-index: 0;
 }
 
-.page7 .img_overlay{
-    position: absolute;
-    left: 0;
-    top: 0;
-    background:transparent;
+.img_overlay{
     width: 100%;
     height: 100%;
-    z-index: 2;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    background: transparent;
+    z-index: 10;
 }
-
 .page7 .img_box .img img{
     width: 100%;
     height: 100%;

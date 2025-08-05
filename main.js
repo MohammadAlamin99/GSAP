@@ -80,7 +80,7 @@ main_div.addEventListener("mousemove", () => {
 // custom cursor
 const page7 = document.querySelector(".page7");
 const cusrsor = document.querySelector(".custom_cursor");
-const img = document.querySelector(".img_box img")
+const img = document.querySelector(".img_box .img");
 
 page7.addEventListener("mousemove", function (dets) {
     gsap.to(cusrsor, {
@@ -89,20 +89,20 @@ page7.addEventListener("mousemove", function (dets) {
         ease: "back.out(1.7)",
     })
 
-    if(dets.target === img){
-gsap.to(cusrsor, {
-            scale:4,
-        })
-    } else {
-    gsap.to(cusrsor, {
-        scale:1,
-    })
-    }
 })
 
-// img.addEventListener("mousemove", function (e) {
+img.addEventListener("mousemove", function (e) {
+    cusrsor.innerHTML = "View More",
+    gsap.to(cusrsor, {
+        scale: 4,
+        ease: "back.out(1.7)",
+    })
     
-// })
-// img.addEventListener("mouseleave", function (e) {
-
-// })
+})
+img.addEventListener("mouseleave", function (e) {
+    cusrsor.innerHTML = "",
+    gsap.to(cusrsor, {
+        scale: 1,
+        ease: "back.out(1.7)",
+    })
+})
