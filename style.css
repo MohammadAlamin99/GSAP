@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page1{
+    width: 100%;
+    height: 100vh;
+    background-color: aquamarine;
+}
+.page2{
+    width: 100%;
+    height: 100vh;
+    background-color: palegoldenrod;
+}
+.page3{
+    width: 100%;
+    height: 100vh;
+    background-color: green;
+}
+.page4{
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;
+}
+.page5{
+    width: 100%;
+    height: 100vh;
+    background-color: paleturquoise;
+    overflow: hidden;
+}
+
+.page5 h1{
+   font-size: 40vw;
+   font-weight: 700;
+   font-family: 'Times New Roman', Times, serif; 
+}
+.page6{
+      width: 100%;
+    height: 100vh;
+    background-color: black;
+    
+}
+
+
+.box{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+.page1, .page2, .page3, .page4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
