@@ -63,7 +63,7 @@ const main_div = document.querySelector(".svg-wrapper");
 main_div.addEventListener("mousemove", (dots) => {
     Path = `M 10 100 Q ${dots.x}  ${dots.y} 990 100`;
     gsap.to(".svg-wrapper svg path", {
-        duration:0.2,
+        duration: 0.2,
         attr: { d: Path },
         ease: "power3.out",
     })
@@ -71,7 +71,38 @@ main_div.addEventListener("mousemove", (dots) => {
 main_div.addEventListener("mousemove", () => {
     gsap.to(".svg-wrapper svg path", {
         attr: { d: finalPath },
-        duration:1.5,
+        duration: 1.5,
         ease: "elastic.out(1,0.2)",
     })
 })
+
+
+// custom cursor
+const page7 = document.querySelector(".page7");
+const cusrsor = document.querySelector(".custom_cursor");
+const img = document.querySelector(".img_box img")
+
+page7.addEventListener("mousemove", function (dets) {
+    gsap.to(cusrsor, {
+        x: dets.x,
+        y: dets.y,
+        ease: "back.out(1.7)",
+    })
+
+    if(dets.target === img){
+gsap.to(cusrsor, {
+            scale:4,
+        })
+    } else {
+    gsap.to(cusrsor, {
+        scale:1,
+    })
+    }
+})
+
+// img.addEventListener("mousemove", function (e) {
+    
+// })
+// img.addEventListener("mouseleave", function (e) {
+
+// })
